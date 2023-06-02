@@ -1,4 +1,5 @@
 import React from 'react'
+import '../styles/pages/Contacto.css'
 import { Row } from 'react-bootstrap'
 import { Col } from 'react-bootstrap'
 import Figure from 'react-bootstrap/Figure';

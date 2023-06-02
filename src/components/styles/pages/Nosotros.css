@@ -1,0 +1,17 @@
+.container-nosotros, .texto-nosotros {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto-nosotros p {
+    width: 80%;
+}
+
+.carta1-nosotros, .carta2-nosotros, .carta3-nosotros, .carta4-nosotros, .carta5-nosotros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

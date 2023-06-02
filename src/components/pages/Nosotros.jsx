@@ -1,4 +1,5 @@
 import React from 'react'
+import '../styles/pages/Nosotros.css'
 import { Col } from 'react-bootstrap'
 import { Row } from 'react-bootstrap'
 import Card from 'react-bootstrap/Card';
@@ -69,17 +70,6 @@ const Nosotros = () => {
                   </Card>
                </div>
               </Col> 
-              <Col>
-                  <Card style={{ width: '12rem'}}>
-                    <Card.Img variant="Miguel Torres" src="images/nosotros/nosotros5.jpg" />
-                    <Card.Body>
-                      <Card.Title>Miguel Torres</Card.Title>
-                      <Card.Text>
-                        Curabitur nec dolor nec elit iaculis scelerisque sit amet maximus turpis. Sed eu erat tempor.
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-              </Col>
             </Row>
           </div>
         </Col>

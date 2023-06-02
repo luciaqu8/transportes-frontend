@@ -8,6 +8,7 @@ import NavBar from './components/layout/NavBar';
 import Footer from './components/layout/Footer';
 
 import HomePage from './components/pages/HomePage';
+import NovedadesPage from './components/pages/NovedadesPage';
 import Contacto from './components/pages/Contacto';
 import Nosotros from './components/pages/Nosotros';
 
@@ -21,6 +22,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route path='/' element={<HomePage />} />
+          <Route path='/novedades' element={<NovedadesPage />} />
           <Route path='/nosotros' element={<Nosotros />} />
           <Route path='/contacto' element={<Contacto />} />
         </Routes>

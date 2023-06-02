@@ -1,4 +1,5 @@
 import React from 'react'
+import '../styles/pages/HomePage.css'
 import Card from 'react-bootstrap/Card';
 import { Row } from 'react-bootstrap';
 import { Col }from 'react-bootstrap';
@@ -11,12 +12,16 @@ const HomePage = () => {
 
         <Col className='container-homepage'>
 
+          
+        <h1>Encuentra los mejores transportes para alquilar</h1>
+        <h3>¡y al mejor precio!</h3>
+
           <div className='cartas'>
 
             <Row>
 
               <Col>
-                <div className='carta1'>
+                <div className='carta1 mb-5'>
                   <Card style={{ width: '18rem', height:'15rem' }}>
                     <Card.Body>
                       <Card.Title>Camiones</Card.Title>
@@ -31,7 +36,7 @@ const HomePage = () => {
               </Col>
 
               <Col>
-                <div className='carta2'>
+                <div className='carta2 mb-5'>
                   <Card style={{ width: '18rem', height:'15rem' }}>
                     <Card.Body>
                       <Card.Title>Barcos</Card.Title>
@@ -46,7 +51,7 @@ const HomePage = () => {
               </Col>
 
               <Col>
-                <div className='carta3'>
+                <div className='carta3 mb-5'>
                   <Card style={{ width: '18rem', height:'15rem' }}>
                     <Card.Body>
                       <Card.Title>Aviones</Card.Title>
@@ -69,7 +74,7 @@ const HomePage = () => {
             <Row>
 
               <Col>
-                <div className='carta-img1'>
+                <div className='carta-img1 mb-5'>
                   <Card style={{ width: '18rem'}}>
                     <Card.Img variant="card1" src="images/home/card1.jpg" />
                     <Card.Body>
@@ -84,7 +89,7 @@ const HomePage = () => {
               </Col>
 
               <Col>
-                <div className='carta-img2'>
+                <div className='carta-img2 mb-5'>
                   <Card style={{ width: '18rem'}}>
                     <Card.Img variant="card2" src="images/home/card2.jpg" />
                     <Card.Body>
@@ -99,7 +104,7 @@ const HomePage = () => {
               </Col>
 
               <Col>
-                <div className='carta-img3'>
+                <div className='carta-img3 mb-5'>
                   <Card style={{ width: '18rem'}}>
                     <Card.Img variant="card3" src="images/home/card3.jpg" />
                     <Card.Body>

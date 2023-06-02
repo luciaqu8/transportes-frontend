@@ -1,49 +1,9 @@
-.homepage {
-    display: flex;
-    padding: 2rem;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
+body {
+    font-size: 16px;
+    line-height: 20px;
 }
 
-.container-homepage {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-}
-
-.container-nosotros, .texto-nosotros {
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.texto-nosotros p {
-    width: 80%;
-}
-
-.carta1-nosotros, .carta2-nosotros, .carta3-nosotros, .carta4-nosotros, .carta5-nosotros {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.contacto-page {
-    padding: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.mapa {
-    padding: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+h2 {
+    color: #2e64a1;
+    font-weight: 400;
 }

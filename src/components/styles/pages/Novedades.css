@@ -1,0 +1,28 @@
+.novedades {
+    display: flex;
+    padding: 2rem;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.container-novedades {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+section {
+    display: flex;
+}
+
+@media (min-width: 1200px) { 
+
+    .novedades {
+        display: flex;
+        flex-direction: column;
+    }
+}
