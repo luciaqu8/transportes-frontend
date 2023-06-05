@@ -1,12 +1,47 @@
-import React from 'react'
+import { useState } from 'react'
 import '../styles/pages/Contacto.css'
 import { Row } from 'react-bootstrap'
 import { Col } from 'react-bootstrap'
 import Figure from 'react-bootstrap/Figure';
-import Form from 'react-bootstrap/Form';
-import { Button } from 'react-bootstrap';
+import axios from 'axios';
 
 const Contacto = () => {
+
+  const initialForm = {
+    nombre: '',
+    email: '',
+    telefono: '',
+    mensaje: ''
+  }
+
+  const [sending, setSending] = useState(false);
+  const [msg, setMsg] = useState('');
+  const [formData, setFormData] = useState(initialForm);
+
+  const handleChange = e => {
+    const {name, value} = e.target;
+    setFormData(oldData => ({
+      ...oldData,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async e => {
+    e.preventDefault();
+    setMsg('');
+    setSending(true)
+
+    const response = await 
+                    axios.post('http://localhost:3000/api/contacto',  
+                   formData);
+    setSending(false);
+    setMsg(response.data.message);
+    if (response.data.error === false) {
+      setFormData(initialForm)
+    }
+  }
+
+
   return (
     <>
       <Row className='contacto-page'>
@@ -18,28 +53,39 @@ const Contacto = () => {
           </div>
 
           <div className='form-contacto'>
-            <Form>
 
-              <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                <Form.Label>Nombre</Form.Label>
-                <Form.Control type="name" placeholder="Tu nombre" />
-              </Form.Group>
+            <form className='formulario' action="/contact" onSubmit={handleSubmit}>
 
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Email</Form.Label>
-                <Form.Control type="email" placeholder="Tu email" />
-                <Form.Text className="text-muted">
+              <div className="mb-3">
+                <label>Nombre</label>
+                <input className="form-control" type="text" name='nombre' value={formData.nombre} onChange={handleChange} placeholder="Tu nombre" />
+              </div>
+
+              <div className="mb-3">
+                <label>Email</label>
+                <input className="form-control" type="text" name='email' value={formData.email} onChange={handleChange} placeholder="Tu email" />
+                <p className="text-muted form-text">
                   Nunca compartiremos tu mail con nadie.
-                </Form.Text>
-              </Form.Group>
+                </p>
+              </div>
 
-              <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                <Form.Label>Consulta</Form.Label>
-                <Form.Control as="textarea" rows={3} placeholder="Escriba aquí su consulta"/>
-              </Form.Group>
-            </Form>
 
-            <Button variant="dark">Enviar</Button>
+
+              <div className="mb-3">
+                <label>Consulta</label>
+                <textarea type="text" name='mensaje' className="form-control" value={formData.mensaje} onChange={handleChange} rows={3} placeholder="Escriba aquí su consulta"/>
+              </div>
+
+              {sending ? <p>Enviando...</p> : null}
+                {msg ? <p>{msg}</p> : null}
+
+              <button className="btn btn-dark" type='submit' value='Enviar'>Enviar</button>
+              
+
+            </form>
+
+
+
           </div>
         </div>
         </Col>
