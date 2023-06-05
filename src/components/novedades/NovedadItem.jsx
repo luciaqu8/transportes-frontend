@@ -1,7 +1,5 @@
 import '../styles/pages/Novedades.css'
 import Card from 'react-bootstrap/Card';
-import { Col }from 'react-bootstrap';
-import { Row }from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 
 const NovedadItem = (props) => {
